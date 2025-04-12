@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Task Tracker</h1>
+
+    <!-- Add Task Form -->
+    <form id="addTaskForm">
+      <input type="text" id="title" placeholder="Task Title" required />
+      <input type="date" id="date" required />
+      <input type="time" id="time" required />
+      <select id="priority" required>
+        <option value="" disabled selected>Priority</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <select id="status" required>
+        <option value="" disabled selected>Status</option>
+        <option value="Pending">Pending</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button type="submit">➕ Add Task</button>
+    </form>
+
+    <!-- Task Table -->
+    <table id="taskTable">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Deadline</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic tasks will appear here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
